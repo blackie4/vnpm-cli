@@ -1,0 +1,28 @@
+{
+  "name": "vnpm-cli",
+  "version": "0.0.1",
+  "description": "3vjia npm client",
+  "main": "bin/vnpm",
+  "preferGlobal": true,
+  "bin": {
+    "vnpm": "./bin/vnpm"
+  },
+  "homepage": "https://github.com/blackie4/vnpm-cli",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:blackie4/vnpm-cli.git",
+    "web": "https://github.com/blackie4/vnpm-cli"
+  },
+  "bugs": {
+    "url": "https://github.com/blackie4/vnpm-cli/issues",
+    "email": "yipbino@gmail.com"
+  },
+  "keywords": [
+    "vnpm"
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "author": "yipbino <yipbino@gmail.com>",
+  "license": "MIT"
+}
