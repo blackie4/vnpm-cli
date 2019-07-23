@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # npm registry
-NPM_REGISTRY=https://rnpm.3weijia.com/
+NPM_REGISTRY=https://r-npm.3weijia.com
 
 # node.js dist
 NODE_DIST=https://npm.taobao.org/dist
@@ -9,4 +9,3 @@ NODE_DIST=https://npm.taobao.org/dist
 npm --registry=$NPM_REGISTRY --disturl=$NODE_DIST \
     --userconfig=$HOME/.vnpmrc  --cache=$HOME/.cache/vnpm \
     $@
-
