@@ -11,5 +11,3 @@ var HOME = os.homedir();
 shell.exec(`npm --registry=${NPM_REGISTRY} --disturl=${NODE_DIST} \
     --userconfig=${HOME}/.vnpmrc  --cache=${HOME}/.cache/vnpm ${params}`);
 
-
-
