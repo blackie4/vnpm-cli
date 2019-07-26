@@ -1,13 +1,19 @@
 #!/usr/bin/env node
 
-var os = require("os");
-var shell = require("shelljs");
-var params = process.argv.slice(2).join(' ');
+const os = require("os");
+const colors = require('colors');
+const child_process = require('child_process')
+const params = process.argv.slice(2).join(' ');
 
-var NPM_REGISTRY="https://r-npm.3weijia.com";
-var NODE_DIST="https://npm.taobao.org/dist";
-var HOME = os.homedir();
+const NPM_REGISTRY = "https://r-npm.3weijia.com";
+const NODE_DIST = "https://npm.taobao.org/dist";
+const HOME = os.homedir();
 
-shell.exec(`npm --registry=${NPM_REGISTRY} --disturl=${NODE_DIST} \
-    --userconfig=${HOME}/.vnpmrc  --cache=${HOME}/.cache/vnpm ${params}`);
-
+try {
+  child_process.execSync(`npm --registry=${NPM_REGISTRY} --disturl=${NODE_DIST} \
+    --userconfig=${HOME}/.vnpmrc --cache=${HOME}/.cache/vnpm  ${params}`, {
+      stdio: 'inherit'
+  });
+} catch (e) {
+  console.log('child_process.execSync'.red, e)
+}
